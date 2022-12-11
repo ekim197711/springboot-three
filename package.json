@@ -1,0 +1,23 @@
+{
+  "name": "springboot-three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker_ps": "docker ps",
+    "docker_images": "docker images",
+    "curl_local_8090": "curl http://localhost:8090/",
+    "curl_local_8080": "curl http://localhost:8080/",
+    "native image": "mvn -Pnative spring-boot:build-image",
+    "native compile": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat\" && mvn -Pnative native:compile",
+    "native compile bat file": "./native_build.bat",
+    "run_exe_file": "./target/springboot-three.exe",
+    "run_jar_file": "java -jar ./target/springboot-three-0.0.1-SNAPSHOT.jar",
+    "memory_usage": "wmic process where processid=24356 get WorkingSetSize",
+    "memory_usage_tasklist": "tasklist //fi \"imagename eq springboot-three.exe\"",
+    "docker_run_image": "docker run --rm -it -p 8090:8080 springboot-three:0.0.1-SNAPSHOT"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
